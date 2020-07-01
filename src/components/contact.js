@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 export default class Contact extends Component {
   constructor(props) {
@@ -7,6 +8,7 @@ export default class Contact extends Component {
     this.state = {
       msg: '',
       success: false,
+      loading: false,
       fname: '',
       lname: '',
       email: '',
@@ -34,6 +36,7 @@ export default class Contact extends Component {
       })
     }
     else {
+      this.setState({loading: true})
       axios.post('https://tranquil-gorge-12858.herokuapp.com/contact', {
         fname, lname, email, contact, company, message
       }).then(data=> {
@@ -42,6 +45,7 @@ export default class Contact extends Component {
           this.setState({
             msg: 'Message sent successfully',
             success: true,
+            loading: false,
             fname: '',
             lname: '',
             email: '',
@@ -121,6 +125,8 @@ export default class Contact extends Component {
           <hr />
         </div>
         <div className="row">
+          <div className="col-sm-5 col-5"></div>
+        {this.state.loading===true && <div className="col-sm-2" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: "white"}}><CircularProgress disableShrink style={{color:"white"}}/><br/>loading....</div>}
           {this.state.errors.requiredFieldError !== '' &&
             <div className='info col-12 col-sm-12'>
               <p style={{ color: "red", textAlign: 'center' }}>{this.state.errors.requiredFieldError}</p>

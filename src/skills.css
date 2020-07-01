@@ -55,3 +55,63 @@ small {
 small a {
   color: inherit;
 }
+
+@media only screen and (max-width: 770px){
+
+  .carousel-caption{
+   
+    /* margin-left: 270px; */
+    padding-top: 0px;
+    padding-bottom: 0px;
+    top: 200px;
+  }
+  }
+
+  @media only screen and (max-width: 360px){
+    .makeStyles-content-9{
+      margin-left: 0px!important;
+    }
+    .small-screen-profile{
+      /* margin-left: -280px; */
+      padding: 0px!important;
+    }
+  }
+
+  @media only screen and (max-width: 441px){
+    .makeStyles-content-9{
+      margin-left: 0px!important;
+    }
+    .small-screen-profile{
+      /* margin-left: -280px; */
+      padding: 0px!important;
+    }
+  }
+
+  @media only screen and (max-width: 320px){
+    .makeStyles-content-9{
+      margin-left: 0px!important;
+    }
+    .small-screen-profile{
+      /* margin-left: -280px; */
+      padding: 0px!important;
+    }
+  }
+
+  @media only screen and (max-width: 375px){
+    .makeStyles-content-9{
+      margin-left: 0px!important;
+    }
+    .small-screen-profile{
+      /* margin-left: -280px; */
+      padding: 0px!important;
+    }
+  }
+  @media only screen and (max-width: 414px){
+    .makeStyles-content-9{
+      margin-left: 0px!important;
+    }
+    .small-screen-profile{
+      /* margin-left: -280px; */
+      padding: 0px!important;
+    }
+  }
